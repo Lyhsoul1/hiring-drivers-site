@@ -1,61 +1,72 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Hiring Drivers Now</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Segoe UI', sans-serif;
-      background-color: #eaeaea;
+      margin: 0;
+      background-color: #e5e5e5; /* Cinza empresarial */
       color: #333;
-      min-height: 100vh;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
+      height: 100vh;
       text-align: center;
       padding: 20px;
     }
-    h1 { font-size: 2.5rem; margin-bottom: 10px; }
-    p { font-size: 1.1rem; margin: 8px 0; max-width: 600px; }
-    button {
-      margin-top: 30px;
-      background-color: #4b6cb7;
-      border: none;
-      padding: 12px 30px;
-      font-size: 1.1rem;
-      color: white;
-      border-radius: 30px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      font-weight: 600;
+
+    h1 {
+      font-size: 2.2rem;
+      color: #4b6cb7;
+      margin-bottom: 10px;
     }
-    button:hover {
+
+    p {
+      font-size: 1.1rem;
+      max-width: 500px;
+      margin-bottom: 30px;
+    }
+
+    a.button {
+      display: inline-block;
+      background-color: #4b6cb7;
+      color: white;
+      padding: 12px 25px;
+      font-size: 1rem;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+
+    a.button:hover {
       background-color: #3953a4;
     }
+
     footer {
-      margin-top: 40px;
-      font-size: 0.9rem;
+      margin-top: 50px;
+      font-size: 0.85rem;
       color: #777;
     }
   </style>
 </head>
 <body>
+
   <h1>Hiring Drivers Now</h1>
-  <p><strong>WHERE EMPLOYMENT BEGINS HERE!</strong></p>
-  <p>HELPING PROFESSIONAL DRIVERS FIND THE BEST FITTING JOB</p>
+  <p>WHERE EMPLOYMENT BEGINS HERE!<br>Helping professional drivers find the best fitting job.</p>
 
-  <button onclick="location.href='form.html'">Application Here</button>
+  <a href="form.html" class="button">Application Here</a>
 
-  <p style="margin-top: 40px;">
-    Avg. VIP Driver Pay: Up to $40/hour<br>
-    Part-Time Driver Earnings: $35,000 – $90,000/year<br>
-    Full-Time & Executive Driver Earnings: $90,000 – $150,000+/year<br>
-    Receive Job Offers in Less Than 24 Hours!
-  </p>
+  <footer>
+    <p>Avg. VIP Driver Pay: Up to $40/hour<br>
+    Part-Time: $35,000 – $90,000/year<br>
+    Full-Time & Executive: $90,000 – $150,000+/year<br>
+    Receive Job Offers in Less Than 24 Hours!</p>
+    <p>© 2025 Hiring Drivers Now. All rights reserved.</p>
+  </footer>
 
-  <footer>&copy; 2025 Drivers Now. All rights reserved.</footer>
 </body>
 </html>
