@@ -3,45 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>VIP Driver Application Form</title>
+  <title>VIP Driver Application</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f7f7f7;
-      padding: 30px;
+      background-color: #f0f0f0;
+      padding: 20px;
       color: #333;
     }
     h2 {
       text-align: center;
-      margin-bottom: 30px;
+      margin-bottom: 25px;
     }
     form {
       background: white;
-      max-width: 600px;
+      max-width: 450px;
       margin: auto;
-      padding: 30px;
+      padding: 25px 20px;
       border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
     label {
       display: block;
       margin-top: 15px;
-      font-weight: bold;
+      font-weight: 600;
+      font-size: 0.95rem;
     }
     input, select, textarea {
       width: 100%;
-      padding: 10px;
+      padding: 8px 10px;
       margin-top: 5px;
       border-radius: 5px;
       border: 1px solid #ccc;
-      font-size: 1rem;
+      font-size: 0.95rem;
     }
     button {
       margin-top: 20px;
       background-color: #4b6cb7;
       color: white;
       border: none;
-      padding: 12px 25px;
+      padding: 10px 20px;
       border-radius: 5px;
       font-size: 1rem;
       cursor: pointer;
@@ -53,7 +54,7 @@
 </head>
 <body>
 
-  <h2>VIP Driver Application Form</h2>
+  <h2>VIP Driver Application</h2>
 
   <form name="vip-driver" method="POST" data-netlify="true" enctype="multipart/form-data">
     <input type="hidden" name="form-name" value="vip-driver">
@@ -94,7 +95,7 @@
     <input type="number" name="years-of-experience" min="0" required>
 
     <label>Availability</label>
-    <textarea name="availability" rows="3" required></textarea>
+    <textarea name="availability" rows="2" required></textarea>
 
     <label>License Front</label>
     <input type="file" name="license-front" accept="image/*,.pdf">
