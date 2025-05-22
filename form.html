@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Driver Application Form</title>
+  <title>VIP Driver Application Form</title>
   <link rel="icon" href="car-icon.png" type="image/png" />
   <style>
     body {
@@ -11,7 +11,7 @@
       margin: 0;
       padding: 0;
       min-height: 100vh;
-      background: url('https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=1600&q=80') no-repeat center center fixed;
+      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80') no-repeat center center fixed;
       background-size: cover;
       display: flex;
       justify-content: center;
@@ -20,7 +20,6 @@
       color: #333;
     }
 
-    /* Filtro escurecido sobre o fundo */
     body::before {
       content: "";
       position: absolute;
@@ -28,7 +27,7 @@
       left: 0;
       height: 100%;
       width: 100%;
-      background: rgba(0,0,0,0.5);
+      background: rgba(0,0,0,0.55);
       z-index: 0;
     }
 
@@ -36,7 +35,7 @@
       position: relative;
       z-index: 1;
       background: rgba(255, 255, 255, 0.95);
-      max-width: 400px;
+      max-width: 420px;
       width: 90%;
       padding: 25px 20px;
       margin: 40px 0;
@@ -92,11 +91,80 @@
   </style>
 </head>
 <body>
+
   <form name="vip-driver" method="POST" data-netlify="true" enctype="multipart/form-data" action="thanks.html">
     <input type="hidden" name="form-name" value="vip-driver">
+
     <h2>VIP Driver Application Form</h2>
-    <!-- Resto do seu formulário aqui -->
-    <!-- ... campos de nome, telefone, etc ... -->
+
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" name="full-name" required>
+
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="phone">Mobile Phone:</label>
+    <input 
+      type="tel" 
+      id="phone" 
+      name="mobile-phone" 
+      pattern="^(\(\d{3}\)\s?|\d{3}[-\s]?)?\d{3}[-\s]?\d{4}$" 
+      placeholder="(123) 456-7890" 
+      required 
+      title="Please enter phone number in formats like (123) 456-7890 or 123-456-7890" 
+      inputmode="tel"
+    >
+
+    <label for="address">Full Address:</label>
+    <input type="text" id="address" name="full-address" required>
+
+    <label for="city">City:</label>
+    <input type="text" id="city" name="city" required>
+
+    <label for="state">State:</label>
+    <select id="state" name="state" required>
+      <option value="" disabled selected>Select your state</option>
+      <option value="CA">California</option>
+      <option value="NY">New York</option>
+      <option value="TX">Texas</option>
+      <option value="FL">Florida</option>
+      <option value="WA">Washington</option>
+      <!-- adicione mais estados conforme necessário -->
+    </select>
+
+    <label for="vip-experience">Do you have VIP driving experience?</label>
+    <select id="vip-experience" name="vip-experience" required>
+      <option value="" disabled selected>Select an option</option>
+      <option>Yes</option>
+      <option>No</option>
+    </select>
+
+    <label for="years-experience">If yes, how many years?</label>
+    <select id="years-experience" name="years-of-experience" required>
+      <option value="" disabled selected>Select duration</option>
+      <option>Less than 1 year</option>
+      <option>1-2 years</option>
+      <option>3-5 years</option>
+      <option>More than 5 years</option>
+    </select>
+
+    <label for="availability">Availability:</label>
+    <select id="availability" name="availability" required>
+      <option value="" disabled selected>Select availability</option>
+      <option>Part-Time</option>
+      <option>Full-Time</option>
+      <option>Night Only</option>
+      <option>Weekends Only</option>
+    </select>
+
+    <label for="license-front">Driver's License (Front):</label>
+    <input type="file" id="license-front" name="license-front" accept="image/*,.pdf">
+
+    <label for="license-back">Driver's License (Back):</label>
+    <input type="file" id="license-back" name="license-back" accept="image/*,.pdf">
+
+    <button type="submit">Submit Application</button>
   </form>
+
 </body>
 </html>
