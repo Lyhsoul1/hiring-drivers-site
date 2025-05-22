@@ -3,142 +3,223 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Now Hiring Drivers - San Francisco</title>
+  <title>Hiring Drivers</title>
   <link rel="icon" href="car-icon.png" type="image/png" />
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      background: linear-gradient(135deg, #4b6cb7, #182848);
-      color: #f0f0f0;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #fff;
       text-align: center;
       padding: 20px;
     }
 
     h1 {
-      font-size: 2.8rem;
+      font-size: 2.5rem;
       color: #ffcc00;
-      margin-bottom: 15px;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+      margin-bottom: 10px;
     }
 
     p {
-      font-size: 1.25rem;
+      font-size: 1.2rem;
       max-width: 600px;
-      margin: 0 auto 35px;
-      line-height: 1.6;
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+      margin: 0 auto 30px;
     }
 
     a.button {
       display: inline-block;
       background-color: #ffcc00;
-      color: #182848;
-      padding: 14px 32px;
+      color: #000;
+      padding: 14px 28px;
+      font-weight: bold;
       font-size: 1.1rem;
       text-decoration: none;
       border-radius: 8px;
-      box-shadow: 0 5px 15px rgba(255,204,0,0.4);
-      transition: background-color 0.3s ease, transform 0.3s ease;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 1px;
+      transition: background-color 0.3s ease;
       margin-bottom: 40px;
     }
 
     a.button:hover {
       background-color: #e6b800;
-      transform: scale(1.05);
     }
 
-    iframe {
-      border: none;
-      width: 100%;
-      max-width: 600px;
-      height: 300px;
-      border-radius: 10px;
-      margin-bottom: 40px;
+    footer {
+      margin-top: 50px;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+
+    .map {
+      margin: 40px auto;
+      max-width: 90%;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
     }
 
     .testimonials {
-      max-width: 800px;
-      margin: 0 auto 50px;
-      text-align: left;
+      margin: 60px auto;
+      max-width: 700px;
     }
 
     .testimonial {
-      background-color: rgba(255, 255, 255, 0.1);
-      border-left: 4px solid #ffcc00;
+      background-color: rgba(255, 255, 255, 0.08);
       padding: 20px;
       margin-bottom: 20px;
-      border-radius: 8px;
-      font-size: 1rem;
+      border-radius: 10px;
+      font-style: italic;
     }
 
     .testimonial strong {
       display: block;
       margin-top: 10px;
-      font-size: 1rem;
       color: #ffcc00;
     }
 
-    footer {
-      font-size: 0.95rem;
-      color: #ddd;
-      line-height: 1.5;
-      max-width: 600px;
-      margin: 0 auto;
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
-      padding-top: 20px;
+    /* FAQ */
+    .faq-accordion {
+      max-width: 700px;
+      margin: 40px auto;
+      text-align: left;
+    }
+
+    .faq-question {
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.08);
+      border: none;
+      outline: none;
+      padding: 18px 20px;
+      text-align: left;
+      font-size: 1.1rem;
+      color: #ffcc00;
+      cursor: pointer;
+      border-radius: 8px;
+      margin-bottom: 8px;
+      transition: background-color 0.3s ease;
+    }
+
+    .faq-question:hover {
+      background-color: rgba(255, 255, 255, 0.15);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      background-color: rgba(255, 255, 255, 0.06);
+      border-left: 4px solid #ffcc00;
+      padding: 0 20px;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+      border-radius: 0 0 8px 8px;
+    }
+
+    .faq-answer p {
+      margin: 15px 0;
+      color: #eee;
+    }
+
+    .faq-item.open .faq-answer {
+      max-height: 200px;
+      padding: 15px 20px;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      a.button {
+        font-size: 1rem;
+        padding: 12px 22px;
+      }
     }
   </style>
 </head>
 <body>
 
   <h1>Now Hiring Drivers – San Francisco</h1>
-  <p>
-    Earn up to <strong>$1,600 per week</strong><br>
-    No experience required. Immediate openings available.<br>
-    Fast application. Get hired in less than 24 hours!
-  </p>
+  <p><strong>Earn up to <span style="color: #ffcc00;">$1,600/week</span> driving with top companies!</strong><br>
+     Get job offers in less than 24 hours. No experience needed.</p>
 
   <a href="form.html" class="button">Apply Now</a>
 
-  <!-- Mapa -->
-  <h2>Our Service Area</h2>
-  <iframe 
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0866324189363!2d-122.44674752418548!3d37.7739726719858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c5be0cf7f%3A0x1a26ac2a80d3f401!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1716395401720!5m2!1sen!2sus" 
-    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-  </iframe>
+  <!-- Map Section -->
+  <div class="map">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0194695450857!2d-122.41941528468125!3d37.7749297797599!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f7e2e4ac8a6ab%3A0x8e90a6f8494ebf99!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1618374654345!5m2!1sen!2sus"
+      width="100%"
+      height="300"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy">
+    </iframe>
+  </div>
 
-  <!-- Testemunhos -->
-  <h2>Driver Testimonials</h2>
+  <!-- Testimonials -->
   <div class="testimonials">
     <div class="testimonial">
-      "I applied and got a job offer the next morning. The pay is great, and the support team is super responsive!"
-      <strong>— Michael R., San Francisco</strong>
+      "I applied in the morning and got my first job offer by evening. Now I make $1,500/week regularly!"
+      <strong>– Jason R., Full-time Driver</strong>
     </div>
     <div class="testimonial">
-      "As a part-time driver, I still earn enough to cover all my expenses. I definitely recommend this to anyone looking for flexibility."
-      <strong>— Laura G., Oakland</strong>
-    </div>
-    <div class="testimonial">
-      "I moved to SF recently and was worried about finding work. This opportunity was fast, easy, and real. I'm now making $1,500+ weekly!"
-      <strong>— Carlos D., Daly City</strong>
+      "Flexible hours and great pay. I even do part-time and still earn over $700/week!"
+      <strong>– Maria G., Part-time Driver</strong>
     </div>
   </div>
 
-  <!-- Rodapé -->
-  <footer>
-    <p><strong>Why Drive With Us?</strong><br>
-    ✔ Up to $1,600/week pay<br>
-    ✔ Part-Time: $35,000 – $90,000/year<br>
-    ✔ Full-Time & Executive: $90,000 – $150,000+/year<br>
-    ✔ Trusted employers in the San Francisco Bay Area<br>
-    ✔ Fast-track hiring & friendly support</p>
+  <!-- FAQ Section -->
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-accordion">
+    <div class="faq-item">
+      <button class="faq-question">Do I need previous experience to apply?</button>
+      <div class="faq-answer">
+        <p>No experience is required. We welcome new drivers and help you get started fast.</p>
+      </div>
+    </div>
 
-    <p>© 2025 Hiring Drivers. All rights reserved.</p>
+    <div class="faq-item">
+      <button class="faq-question">How fast can I get hired?</button>
+      <div class="faq-answer">
+        <p>Most drivers receive job offers within 24 hours of applying. It’s a fast process.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Is this full-time or part-time work?</button>
+      <div class="faq-answer">
+        <p>You choose! We offer both part-time flexibility and full-time executive driving roles.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Where are the driving jobs located?</button>
+      <div class="faq-answer">
+        <p>We operate across San Francisco and surrounding areas like Oakland, Daly City, and more.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>Avg. Driver Pay: Up to $25/hour<br>
+    Part-Time: $35,000 – $90,000/year<br>
+    Full-Time & Executive: $90,000 – $150,000+/year<br>
+    Receive Job Offers in Less Than 24 Hours!</p>
+    <p>© 2025 Hiring Drivers SF. All rights reserved.</p>
   </footer>
+
+  <!-- JavaScript para o FAQ accordion -->
+  <script>
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+      const btn = item.querySelector('.faq-question');
+      btn.addEventListener('click', () => {
+        faqItems.forEach(i => {
+          if (i !== item) i.classList.remove('open');
+        });
+        item.classList.toggle('open');
+      });
+    });
+  </script>
 
 </body>
 </html>
