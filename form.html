@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>VIP Driver Application</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VIP Driver Application Form</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -36,6 +36,7 @@
       border-radius: 5px;
       border: 1px solid #ccc;
       font-size: 0.95rem;
+      box-sizing: border-box;
     }
     button {
       margin-top: 20px;
@@ -54,29 +55,29 @@
 </head>
 <body>
 
-  <h2>VIP Driver Application</h2>
+  <h2>VIP Driver Application Form</h2>
 
   <form name="vip-driver" method="POST" data-netlify="true" enctype="multipart/form-data" action="thanks.html">
     <input type="hidden" name="form-name" value="vip-driver">
 
-    <label for="name">Full Name</label>
+    <label for="name">Full Name:</label>
     <input type="text" id="name" name="full-name" required>
 
-    <label for="email">Email Address</label>
+    <label for="email">Email Address:</label>
     <input type="email" id="email" name="email" required>
 
-    <label for="phone">Mobile Phone</label>
-    <input type="tel" id="phone" name="mobile-phone" required>
+    <label for="phone">Mobile Phone:</label>
+    <input type="tel" id="phone" name="mobile-phone" pattern="[0-9]{7,15}" placeholder="Only numbers, 7 to 15 digits" required title="Please enter only numbers">
 
-    <label for="address">Full Address</label>
+    <label for="address">Full Address:</label>
     <input type="text" id="address" name="full-address" required>
 
-    <label for="city">City</label>
+    <label for="city">City:</label>
     <input type="text" id="city" name="city" required>
 
-    <label for="state">Select your state</label>
+    <label for="state">State:</label>
     <select id="state" name="state" required>
-      <option value="">Select</option>
+      <option value="" disabled selected>Select your state</option>
       <option>California</option>
       <option>Texas</option>
       <option>Florida</option>
@@ -84,24 +85,36 @@
       <option>Other</option>
     </select>
 
-    <label>VIP Experience?</label>
-    <select name="vip-experience" required>
-      <option value="">Select</option>
+    <label for="vip-experience">Do you have VIP driving experience?</label>
+    <select id="vip-experience" name="vip-experience" required>
+      <option value="" disabled selected>Select an option</option>
       <option>Yes</option>
       <option>No</option>
     </select>
 
-    <label>Years of Experience</label>
-    <input type="number" name="years-of-experience" min="0" required>
+    <label for="years-experience">If yes, how many years?</label>
+    <select id="years-experience" name="years-of-experience" required>
+      <option value="" disabled selected>Select duration</option>
+      <option>Less than 1 year</option>
+      <option>1-2 years</option>
+      <option>3-5 years</option>
+      <option>More than 5 years</option>
+    </select>
 
-    <label>Availability</label>
-    <textarea name="availability" rows="2" required></textarea>
+    <label for="availability">Availability:</label>
+    <select id="availability" name="availability" required>
+      <option value="" disabled selected>Select availability</option>
+      <option>Part-Time</option>
+      <option>Full-Time</option>
+      <option>Night Only</option>
+      <option>Weekends Only</option>
+    </select>
 
-    <label>License Front</label>
-    <input type="file" name="license-front" accept="image/*,.pdf">
+    <label for="license-front">Driver's License (Front):</label>
+    <input type="file" id="license-front" name="license-front" accept="image/*,.pdf">
 
-    <label>License Back</label>
-    <input type="file" name="license-back" accept="image/*,.pdf">
+    <label for="license-back">Driver's License (Back):</label>
+    <input type="file" id="license-back" name="license-back" accept="image/*,.pdf">
 
     <button type="submit">Submit Application</button>
   </form>
