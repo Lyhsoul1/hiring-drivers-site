@@ -3,20 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Hiring Drivers</title>
+  <title>Hiring Drivers in San Francisco</title>
   <link rel="icon" href="car-icon.png" type="image/png" />
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      background: url('https://images.unsplash.com/photo-1601933470928-c9ec6dc1b189?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+      background-size: cover;
       color: #fff;
       text-align: center;
-      padding: 20px;
+      padding: 0;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.75);
+      min-height: 100vh;
+      padding: 40px 20px;
     }
 
     h1 {
-      font-size: 2.5rem;
+      font-size: 2.8rem;
       color: #ffcc00;
       margin-bottom: 10px;
     }
@@ -44,12 +51,6 @@
       background-color: #e6b800;
     }
 
-    footer {
-      margin-top: 50px;
-      font-size: 0.9rem;
-      color: #ccc;
-    }
-
     .map {
       margin: 40px auto;
       max-width: 90%;
@@ -60,7 +61,7 @@
 
     .testimonials {
       margin: 60px auto;
-      max-width: 700px;
+      max-width: 800px;
     }
 
     .testimonial {
@@ -69,6 +70,7 @@
       margin-bottom: 20px;
       border-radius: 10px;
       font-style: italic;
+      text-align: left;
     }
 
     .testimonial strong {
@@ -77,9 +79,8 @@
       color: #ffcc00;
     }
 
-    /* FAQ */
     .faq-accordion {
-      max-width: 700px;
+      max-width: 800px;
       margin: 40px auto;
       text-align: left;
     }
@@ -123,6 +124,12 @@
       padding: 15px 20px;
     }
 
+    footer {
+      margin-top: 60px;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+
     @media (max-width: 600px) {
       h1 {
         font-size: 2rem;
@@ -132,14 +139,20 @@
         font-size: 1rem;
         padding: 12px 22px;
       }
+
+      .testimonial {
+        font-size: 0.95rem;
+      }
     }
   </style>
 </head>
 <body>
 
+<div class="overlay">
+
   <h1>Now Hiring Drivers – San Francisco</h1>
-  <p><strong>Earn up to <span style="color: #ffcc00;">$1,600/week</span> driving with top companies!</strong><br>
-     Get job offers in less than 24 hours. No experience needed.</p>
+  <p><strong>Earn up to <span style="color: #ffcc00;">$1,600/week</span> with flexible hours.</strong><br>
+     Get hired fast. All experience levels welcome!</p>
 
   <a href="form.html" class="button">Apply Now</a>
 
@@ -158,12 +171,20 @@
   <!-- Testimonials -->
   <div class="testimonials">
     <div class="testimonial">
-      "I applied in the morning and got my first job offer by evening. Now I make $1,500/week regularly!"
-      <strong>– Jason R., Full-time Driver</strong>
+      “I joined as a part-time driver and now I earn over $800/week working evenings only.”
+      <strong>– Laura P., Oakland | 6 months</strong>
     </div>
     <div class="testimonial">
-      "Flexible hours and great pay. I even do part-time and still earn over $700/week!"
-      <strong>– Maria G., Part-time Driver</strong>
+      “This job changed my life. I drive full-time and make $1,400 to $1,600 every single week.”
+      <strong>– James T., San Francisco | 1 year</strong>
+    </div>
+    <div class="testimonial">
+      “No experience, just a car and a license. I applied and started working in 2 days.”
+      <strong>– Victor M., Daly City | 3 weeks</strong>
+    </div>
+    <div class="testimonial">
+      “I pick my own schedule. Weekends only and I still earn great money.”
+      <strong>– Ana K., Berkeley | 4 months</strong>
     </div>
   </div>
 
@@ -171,55 +192,56 @@
   <h2>Frequently Asked Questions</h2>
   <div class="faq-accordion">
     <div class="faq-item">
-      <button class="faq-question">Do I need previous experience to apply?</button>
+      <button class="faq-question">Do I need a commercial driver’s license (CDL)?</button>
       <div class="faq-answer">
-        <p>No experience is required. We welcome new drivers and help you get started fast.</p>
+        <p>No. Most positions only require a standard driver’s license and a clean record.</p>
       </div>
     </div>
 
     <div class="faq-item">
-      <button class="faq-question">How fast can I get hired?</button>
+      <button class="faq-question">Can I choose my working hours?</button>
       <div class="faq-answer">
-        <p>Most drivers receive job offers within 24 hours of applying. It’s a fast process.</p>
+        <p>Yes. Many of our roles are flexible – choose full-time, part-time, or weekends only.</p>
       </div>
     </div>
 
     <div class="faq-item">
-      <button class="faq-question">Is this full-time or part-time work?</button>
+      <button class="faq-question">How soon will I be contacted after applying?</button>
       <div class="faq-answer">
-        <p>You choose! We offer both part-time flexibility and full-time executive driving roles.</p>
+        <p>Most applicants receive job offers within 24 to 48 hours.</p>
       </div>
     </div>
 
     <div class="faq-item">
-      <button class="faq-question">Where are the driving jobs located?</button>
+      <button class="faq-question">What areas are covered?</button>
       <div class="faq-answer">
-        <p>We operate across San Francisco and surrounding areas like Oakland, Daly City, and more.</p>
+        <p>Jobs are available across San Francisco, Oakland, Daly City, Berkeley, and surrounding areas.</p>
       </div>
     </div>
   </div>
 
   <footer>
-    <p>Avg. Driver Pay: Up to $25/hour<br>
-    Part-Time: $35,000 – $90,000/year<br>
-    Full-Time & Executive: $90,000 – $150,000+/year<br>
-    Receive Job Offers in Less Than 24 Hours!</p>
+    <p>Avg. Driver Pay: Up to $25/hour · Weekly Pay Up to $1,600<br>
+    Part-Time: $35,000 – $80,000/year · Full-Time: $90,000 – $150,000+/year<br>
+    Start in less than 48 hours!</p>
     <p>© 2025 Hiring Drivers SF. All rights reserved.</p>
   </footer>
 
-  <!-- JavaScript para o FAQ accordion -->
-  <script>
-    const faqItems = document.querySelectorAll('.faq-item');
-    faqItems.forEach(item => {
-      const btn = item.querySelector('.faq-question');
-      btn.addEventListener('click', () => {
-        faqItems.forEach(i => {
-          if (i !== item) i.classList.remove('open');
-        });
-        item.classList.toggle('open');
+</div>
+
+<!-- FAQ Accordion Script -->
+<script>
+  const faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(item => {
+    const btn = item.querySelector('.faq-question');
+    btn.addEventListener('click', () => {
+      faqItems.forEach(i => {
+        if (i !== item) i.classList.remove('open');
       });
+      item.classList.toggle('open');
     });
-  </script>
+  });
+</script>
 
 </body>
 </html>
