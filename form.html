@@ -1,144 +1,109 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>VIP Driver Application Form</title>
   <style>
-    /* Reset simples */
-    * {
-      margin: 0; padding: 0; box-sizing: border-box;
-    }
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f0f2f5;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      min-height: 100vh;
-      padding: 40px 20px;
-    }
-    .form-container {
-      background: white;
-      max-width: 600px;
-      width: 100%;
-      padding: 40px 30px;
-      border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      padding: 30px;
+      color: #333;
     }
     h2 {
-      margin-bottom: 25px;
-      color: #333;
-      font-weight: 700;
       text-align: center;
+      margin-bottom: 30px;
+    }
+    form {
+      background: white;
+      max-width: 600px;
+      margin: auto;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     }
     label {
-      font-weight: 600;
       display: block;
-      margin-bottom: 6px;
-      color: #555;
+      margin-top: 15px;
+      font-weight: bold;
     }
-    input[type="text"], input[type="email"], input[type="tel"], select, input[type="file"], input[type="number"] {
+    input, select, textarea {
       width: 100%;
-      padding: 12px 15px;
-      margin-bottom: 20px;
-      border: 1.8px solid #ddd;
-      border-radius: 6px;
-      font-size: 16px;
-      transition: border-color 0.3s ease;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
     }
-    input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, select:focus, input[type="number"]:focus {
-      border-color: #007bff;
-      outline: none;
-      box-shadow: 0 0 8px rgba(0,123,255,0.3);
-    }
-    button[type="submit"] {
-      width: 100%;
-      padding: 15px;
-      font-size: 18px;
-      background: #007bff;
-      border: none;
+    button {
+      margin-top: 20px;
+      background-color: #4b6cb7;
       color: white;
-      border-radius: 8px;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 5px;
+      font-size: 1rem;
       cursor: pointer;
-      font-weight: 700;
-      transition: background 0.3s ease;
     }
-    button[type="submit"]:hover {
-      background: #0056b3;
-    }
-    /* Responsividade */
-    @media (max-width: 640px) {
-      body {
-        padding: 20px 10px;
-      }
-      .form-container {
-        padding: 30px 20px;
-      }
+    button:hover {
+      background-color: #3953a4;
     }
   </style>
 </head>
 <body>
 
-  <div class="form-container">
-    <h2>VIP Driver Application Form</h2>
+  <h2>VIP Driver Application Form</h2>
 
-    <form id="applicationForm">
-      <label for="fullName">Full Name</label>
-      <input type="text" id="fullName" name="fullName" required />
+  <form name="vip-driver" method="POST" data-netlify="true" enctype="multipart/form-data">
+    <input type="hidden" name="form-name" value="vip-driver">
 
-      <label for="email">Email Address</label>
-      <input type="email" id="email" name="email" required />
+    <label for="name">Full Name</label>
+    <input type="text" id="name" name="full-name" required>
 
-      <label for="phone">Mobile Phone</label>
-      <input type="tel" id="phone" name="phone" required />
+    <label for="email">Email Address</label>
+    <input type="email" id="email" name="email" required>
 
-      <label for="address">Full Address</label>
-      <input type="text" id="address" name="address" required />
+    <label for="phone">Mobile Phone</label>
+    <input type="tel" id="phone" name="mobile-phone" required>
 
-      <label for="city">City</label>
-      <input type="text" id="city" name="city" required />
+    <label for="address">Full Address</label>
+    <input type="text" id="address" name="full-address" required>
 
-      <label for="state">Select your state</label>
-      <select id="state" name="state" required>
-        <option value="">-- Select --</option>
-        <option value="CA">California</option>
-        <option value="NY">New York</option>
-        <option value="TX">Texas</option>
-        <option value="FL">Florida</option>
-      </select>
+    <label for="city">City</label>
+    <input type="text" id="city" name="city" required>
 
-      <label for="experience">VIP Experience?</label>
-      <input type="text" id="experience" name="experience" placeholder="Yes/No or Details" />
+    <label for="state">Select your state</label>
+    <select id="state" name="state" required>
+      <option value="">Select</option>
+      <option>California</option>
+      <option>Texas</option>
+      <option>Florida</option>
+      <option>New York</option>
+      <option>Other</option>
+    </select>
 
-      <label for="yearsExperience">Years of Experience</label>
-      <input type="number" id="yearsExperience" name="yearsExperience" min="0" />
+    <label>VIP Experience?</label>
+    <select name="vip-experience" required>
+      <option value="">Select</option>
+      <option>Yes</option>
+      <option>No</option>
+    </select>
 
-      <label for="availability">Availability</label>
-      <input type="text" id="availability" name="availability" placeholder="Days and hours available" />
+    <label>Years of Experience</label>
+    <input type="number" name="years-of-experience" min="0" required>
 
-      <label for="licenseFront">License Front:</label>
-      <input type="file" id="licenseFront" name="licenseFront" accept="image/*" />
+    <label>Availability</label>
+    <textarea name="availability" rows="3" required></textarea>
 
-      <label for="licenseBack">License Back:</label>
-      <input type="file" id="licenseBack" name="licenseBack" accept="image/*" />
+    <label>License Front</label>
+    <input type="file" name="license-front" accept="image/*,.pdf">
 
-      <button type="submit" id="submitApplication">Submit Application</button>
-    </form>
-  </div>
+    <label>License Back</label>
+    <input type="file" name="license-back" accept="image/*,.pdf">
 
-  <script>
-    const form = document.getElementById('applicationForm');
-    form.addEventListener('submit', e => {
-      e.preventDefault();
+    <button type="submit">Submit Application</button>
+  </form>
 
-      // Simulação do envio
-      alert('Application submitted! (Esse é um exemplo sem envio real)');
-      form.reset();
-
-      // Opcional: redirecionar para página inicial
-      // window.location.href = 'index.html';
-    });
-  </script>
 </body>
 </html>
