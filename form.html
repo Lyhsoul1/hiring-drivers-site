@@ -4,24 +4,32 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>VIP Driver Application Form</title>
+  <link rel="icon" href="car-icon.png" type="image/png" />
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f0f0f0;
+      background-color: #f0f0f0; /* fundo cinza suave */
+      margin: 0;
       padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
       color: #333;
-    }
-    h2 {
-      text-align: center;
-      margin-bottom: 25px;
     }
     form {
       background: white;
-      max-width: 450px;
-      margin: auto;
+      max-width: 400px; /* tamanho menor */
+      width: 100%;
       padding: 25px 20px;
       border-radius: 10px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      box-sizing: border-box;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #4b6cb7;
     }
     label {
       display: block;
@@ -29,7 +37,7 @@
       font-weight: 600;
       font-size: 0.95rem;
     }
-    input, select, textarea {
+    input, select {
       width: 100%;
       padding: 8px 10px;
       margin-top: 5px;
@@ -38,15 +46,21 @@
       font-size: 0.95rem;
       box-sizing: border-box;
     }
+    input[type="file"] {
+      padding: 3px 5px;
+    }
     button {
-      margin-top: 20px;
+      margin-top: 25px;
       background-color: #4b6cb7;
       color: white;
       border: none;
-      padding: 10px 20px;
+      padding: 12px 0;
       border-radius: 5px;
       font-size: 1rem;
       cursor: pointer;
+      width: 100%;
+      font-weight: 700;
+      transition: background-color 0.3s ease;
     }
     button:hover {
       background-color: #3953a4;
@@ -55,10 +69,10 @@
 </head>
 <body>
 
-  <h2>VIP Driver Application Form</h2>
-
   <form name="vip-driver" method="POST" data-netlify="true" enctype="multipart/form-data" action="thanks.html">
     <input type="hidden" name="form-name" value="vip-driver">
+
+    <h2>VIP Driver Application Form</h2>
 
     <label for="name">Full Name:</label>
     <input type="text" id="name" name="full-name" required>
@@ -67,7 +81,16 @@
     <input type="email" id="email" name="email" required>
 
     <label for="phone">Mobile Phone:</label>
-    <input type="tel" id="phone" name="mobile-phone" pattern="[0-9]{7,15}" placeholder="Only numbers, 7 to 15 digits" required title="Please enter only numbers">
+    <input 
+      type="tel" 
+      id="phone" 
+      name="mobile-phone" 
+      pattern="[0-9]{7,15}" 
+      placeholder="Only numbers, 7 to 15 digits" 
+      required 
+      title="Please enter only numbers" 
+      inputmode="numeric"
+    >
 
     <label for="address">Full Address:</label>
     <input type="text" id="address" name="full-address" required>
