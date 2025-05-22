@@ -6,11 +6,12 @@
   <title>Hiring Drivers</title>
   <link rel="icon" href="car-icon.png" type="image/png" />
   <style>
+    /* Fundo degradê */
     body {
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      background-color: #e5e5e5;
-      color: #333;
+      background: linear-gradient(135deg, #4b6cb7, #182848); /* degrade azul escuro */
+      color: #f0f0f0;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -18,35 +19,76 @@
       height: 100vh;
       text-align: center;
       padding: 20px;
+      position: relative;
+      overflow: hidden;
     }
+
+    /* Imagem de estrada atrás do conteúdo, transparente */
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      height: 100%;
+      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80') no-repeat center center;
+      background-size: cover;
+      opacity: 0.15;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    /* Conteúdo fica acima da imagem */
+    h1, p, a.button, footer {
+      position: relative;
+      z-index: 1;
+    }
+
     h1 {
-      font-size: 2.2rem;
-      color: #4b6cb7;
-      margin-bottom: 10px;
+      font-size: 2.8rem;
+      color: #ffcc00; /* amarelo para contraste */
+      margin-bottom: 15px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
     }
+
     p {
-      font-size: 1.1rem;
-      max-width: 500px;
-      margin-bottom: 30px;
+      font-size: 1.2rem;
+      max-width: 550px;
+      margin-bottom: 40px;
+      line-height: 1.5;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
     }
+
     a.button {
       display: inline-block;
-      background-color: #4b6cb7;
-      color: white;
-      padding: 12px 25px;
-      font-size: 1rem;
+      background-color: #ffcc00;
+      color: #182848;
+      padding: 14px 30px;
+      font-size: 1.1rem;
       text-decoration: none;
-      border-radius: 6px;
-      transition: background-color 0.3s ease;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(255,204,0,0.4);
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
     }
+
     a.button:hover {
-      background-color: #3953a4;
+      background-color: #e6b800;
+      transform: scale(1.05);
     }
+
     footer {
-      margin-top: 50px;
-      font-size: 0.85rem;
-      color: #777;
+      margin-top: 60px;
+      font-size: 0.9rem;
+      color: #ddd;
+      line-height: 1.4;
+      max-width: 600px;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
     }
+
   </style>
 </head>
 <body>
